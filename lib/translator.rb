@@ -1,4 +1,4 @@
-
+require "pry"
 require "yaml"
 
 def load_library(file_path)
@@ -12,6 +12,7 @@ def load_library(file_path)
   emoticons.each do |key, value|
    new_hash['get_emoticon'][value[0]] = emoticons[key][1]
    new_hash['get_meaning'][value[1]] = key
+   binding.pry
   end
   new_hash
 end
